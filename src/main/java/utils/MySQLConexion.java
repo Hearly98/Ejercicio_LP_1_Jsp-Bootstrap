@@ -17,7 +17,7 @@ public class MySQLConexion {
 				//nombre de usuario
 				String usr = "root";
 				//contraseña de usuario
-				String psw = "contrapersonal";
+				String psw = "sebas147";
 				
 			con = DriverManager.getConnection(url, usr, psw);
 		} catch (ClassNotFoundException e) {

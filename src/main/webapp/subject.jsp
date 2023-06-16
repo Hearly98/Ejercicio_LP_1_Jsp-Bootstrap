@@ -25,31 +25,31 @@
 					   <div class="form-group">
 					    <label for="id">Id</label>
 					    <input type="text" 
-					    class="form-control"  id="id"  name="txtId"></div>
+					    class="form-control"  id="id"  name="txtId" value="${s.idsubject}"></div>
 					    
 					  <!-- Codigo -->
 					  <div class="form-group">
 					    <label for="codigo">Codigo</label>
 					    <input type="text" 
-					    class="form-control"  id="codigo"  name="txtCode"></div>
+					    class="form-control"  id="codigo"  name="txtCode" value="${s.code}"></div>
 					    
 					   <!--  Nombre -->
 					  <div class="form-group">
 					    <label for="nombre">Nombre</label>
 					    <input type="text" 
-					    class="form-control" id="nombre" name="txtName"></div>
+					    class="form-control" id="nombre" name="txtName" value="${s.name}"></div>
 					  <br>
 					  	<!-- Level -->
 					    <div class="form-group">
 					    <label for="level">Level</label>
 					    <input type="text"
-					     class="form-control"  id="level" name="txtLevel"></div>
+					     class="form-control"  id="level" name="txtLevel" value="${s.level}"></div>
 					    
 					   <!--  Profesor -->
 					  <div class="form-group">
 					    <label for="profesor">Profesor</label>
 					    <input type="text" class="form-control" id="profesor" 
-					   name="txtTeacher">
+					   name="txtTeacher" value="${s.teacher}">
 					  </div>
 					  
 					  <br>

@@ -49,7 +49,7 @@ public class GestionSubject implements SubjectInterface{
 	}
 
 	@Override
-	public int editar(Subject s) {
+	public int actualizar(Subject s) {
 		// TODO Auto-generated method stub
 
 		int ok=0; //variable de control
@@ -84,6 +84,8 @@ public class GestionSubject implements SubjectInterface{
 		return ok ;
 	
 	}
+	
+
 
 	@Override
 	public int eliminar(Subject s) {
