@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Users\Sebastian\OneDrive\Escritorio\programas cibertec\eclipse\eclipse-workspace\semana_1-clase-1\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3356232241.index
+396814087.index
+2758185129.index
+812647330.index
+541424827.index
+837321378.index

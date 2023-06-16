@@ -28,7 +28,7 @@
 		<br>
 		<button> Enviar Datos</button>
 		</form>
-		<table class="table table-dark table-striped-columns";>
+		<table class="table table-dark table-striped-columns">
 		<thead>
 			<tr>
 				<th>Id</th>
