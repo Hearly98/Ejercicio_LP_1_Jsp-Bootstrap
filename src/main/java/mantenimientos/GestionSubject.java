@@ -49,7 +49,7 @@ public class GestionSubject implements SubjectInterface{
 	}
 
 	@Override
-	public int actualizar(Subject s) {
+	public int editar(Subject s) {
 		// TODO Auto-generated method stub
 
 		int ok=0; //variable de control
@@ -180,5 +180,48 @@ public class GestionSubject implements SubjectInterface{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public Subject buscar(int id) {
+		
+		Subject curso = null;
+		
+		// PLANTILLA DE BD
+		Connection cn=null; 
+		PreparedStatement psm=null; 
+		ResultSet rs = null; 
+		
+		
+		try {
+			
+			cn=MySQLConexion.getConexion();
+			
+			String sql= "select * from subject where idsubject = ?";
+			
+			psm = cn.prepareStatement(sql);
+			psm.setInt(1, id);
+			
+			rs= psm.executeQuery();
+			
+			while(rs.next()) {
+				curso = new Subject();
+				curso.setIdsubject(rs.getInt("idSubject"));
+				curso.setCode(rs.getString("code"));
+				curso.setName(rs.getString("name"));
+				curso.setLevel(rs.getString("level"));
+				curso.setTeacher(rs.getString("teacher"));
+			}
+			
+			
+			}catch(Exception e){
+				//capturar cualquier error con la conexion
+				
+				System.out.println("Error en el proceso LISTADO: " + e.getMessage());
+			}finally {
+				//cerrar la conexion
+				MySQLConexion.closeConexion(cn);//cerrando la conexion usando la variable
+			}
+			return curso ;
+				}
 	
 }

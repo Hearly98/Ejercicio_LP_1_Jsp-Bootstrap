@@ -48,6 +48,41 @@ public class RegistrarSubjectServlet extends HttpServlet {
 		
 	}
 
+	private void actualizar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		int Subject = Integer.parseInt(request.getParameter("txtId"));
+		//entradas
+		String code= request.getParameter("txtCode");
+		String name= request.getParameter("txtName");
+		String level= request.getParameter("txtLevel");
+		String teacher= request.getParameter("txtTeacher");
+		
+		//crear un objeto
+		
+		Subject s= new Subject();
+		s.setIdsubject(Subject);
+		s.setCode(code);
+		s.setName(name);
+		s.setLevel(level);
+		s.setTeacher(teacher);
+		
+		//proceso de registro -> clase de Gestion
+		
+		GestionSubject gestion = new GestionSubject();
+		int ok = gestion.registrar(s);
+		
+		
+		//validacion
+		if(ok==0) {
+			request.setAttribute("mensaje", "<div class='alert alert-danger' role= 'alert'> Error al registrar</div>");
+			request.getRequestDispatcher("subject.jsp").forward(request, response);
+		}else {
+			request.setAttribute("mensaje", "<div class='alert alert-success' role= 'alert'>Registro OK</div>");
+			request.getRequestDispatcher("subject.jsp").forward(request, response);
+		}
+
+	}
+
 	private void listar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		//entradas -> parametros para el filtrado

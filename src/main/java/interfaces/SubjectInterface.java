@@ -21,4 +21,7 @@ public interface SubjectInterface {
 	
 	//listado de los cursos de un determinado profesor
 	public List<Subject>listado(String teacher);
+	
+	//metodo para buscar un curso segun el codigo y devolver su informacion
+	public Subject buscar (int id);
 }
