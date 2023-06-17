@@ -55,10 +55,9 @@
 					  <br>
 					  
 					  <button type="submit" class="btn btn-primary" name="type" value="reg">Registrar</button>
-					  <button type="submit" class="btn btn-primary" name="type" value="act">Actualizar</button>
 					  <button type="submit" class="btn btn-danger" name="type" value="eli">Eliminar</button>
 					  <button type="submit" class="btn btn-warning" name="type" value="lst">Listar</button>
-					  
+					  <button type="reset" class="btn btn-warning">Limpiar</button>
 					</form>
 					<br>
 					${mensaje }
@@ -101,7 +100,7 @@
 														<input type="hidden" name="id" value="<%=s.getIdsubject()%>">
 													<button 
 													type ="submit" class="btn btn-link"
-													name="type" value="reg"> 
+													name="type" value="editar"> 
 														<img alt="" src="img/icons/edit.png">
 													</button>
 													</form>
