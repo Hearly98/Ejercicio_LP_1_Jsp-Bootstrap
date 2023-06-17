@@ -2,6 +2,8 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%--directriz para importar mis librerias personalizadas --%>
+<%@ taglib uri="WEB-INF/libreria.tld" prefix="mis_tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,10 +43,13 @@
 					  <br>
 					  	<!-- Level -->
 					    <div class="form-group">
-					    <label for="level">Level</label>
+					    <label for="nivel">Nivel</label>
 					    <input type="text"
-					     class="form-control"  id="level" name="txtLevel" value="${s.level}"></div>
-					    
+					     class="form-control"  id="nivel" name="txtLevel" value="${s.level}"></div>
+					     <br>
+					    <select class="form-control" name="cboNivel">
+					    	<misTags:opcionesCboNivel value="${s.level}"/>
+					    </select>
 					   <!--  Profesor -->
 					  <div class="form-group">
 					    <label for="profesor">Profesor</label>
@@ -101,7 +106,7 @@
 														<input type="hidden" name="id" value="<%=s.getIdsubject()%>">
 													<button 
 													type ="submit" class="btn btn-link"
-													name="type" value="reg"> 
+													name="type" value="editar"> 
 														<img alt="" src="img/icons/edit.png">
 													</button>
 													</form>

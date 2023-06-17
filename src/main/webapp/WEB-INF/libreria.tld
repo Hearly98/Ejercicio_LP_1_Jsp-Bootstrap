@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib>
+
+		<!--  configuracion del archivo -->
+	<tlibversion>1.0</tlibversion>
+	<jspversion>1.0</jspversion>
+	<shortname>mis_tags</shortname>
+	
+	
+	<!--  define la etiqueta asociada a la clase -->
+	<tag>
+		<name>opcionesCboNivel</name>
+		<tagclass>etiquetas.ComboNivelesTag</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>Muestra las opciones de la tabla Nivel para el combo</info>
+	</tag>
+
+</taglib>

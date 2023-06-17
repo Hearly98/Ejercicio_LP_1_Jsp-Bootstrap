@@ -10,6 +10,18 @@ create table subject(
     constraint pk_subject primary key (idsubject)
 );
 select * from subject;
+
+insert into subject values(null,'CU0001','LPI','3','José Atúncar');
+
+update subject set code='CU0002', name = 'LPII',  level='4', teacher = 'José Atúncar' 
+where idsubject = 2;
+
+create procedure usp_buscar(cod int)
+	select * from subject where idsubject = cod;
+
+-- prueba
+call usp_buscar(1);
+
 /* Tabla niveles */
 create table tb_level(
 	level char(2) not null,
@@ -26,16 +38,7 @@ insert into tb_level values('6','Sexto ciclo');
 
 select * from tb_level;
 
-insert into subject values(null,'CU0001','LPI','3','José Atúncar');
 
-update subject set code='CU0002', name = 'LPII',  level='4', teacher = 'José Atúncar' 
-where idsubject = 2;
-
-create procedure usp_buscar(cod int)
-	select * from subject where idsubject = cod;
-
--- prueba
-call usp_buscar(1);
 
 create table estudiantes(
 	id int not null auto_increment,
