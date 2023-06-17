@@ -198,8 +198,8 @@ public class GestionSubject implements SubjectInterface{
 			
 			cn=MySQLConexion.getConexion();
 			
-			String sql= "select * from subject where idsubject = ?";
-			
+			//String sql= "select * from subject where idsubject = ?";
+			String sql ="{call usp_buscar(?)}"; //procedimiento almacenado
 			psm = cn.prepareStatement(sql);
 			psm.setInt(1, id);
 			

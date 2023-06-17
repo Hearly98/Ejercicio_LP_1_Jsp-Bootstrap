@@ -57,7 +57,7 @@
 					  <button type="submit" class="btn btn-primary" name="type" value="reg">Registrar</button>
 					  <button type="submit" class="btn btn-danger" name="type" value="eli">Eliminar</button>
 					  <button type="submit" class="btn btn-warning" name="type" value="lst">Listar</button>
-					  <button type="reset" class="btn btn-warning">Limpiar</button>
+					  <button type="submit" class="btn btn-warning" name="type" value="reset">Limpiar</button>
 					</form>
 					<br>
 					${mensaje }

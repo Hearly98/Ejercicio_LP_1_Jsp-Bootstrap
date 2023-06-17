@@ -41,10 +41,16 @@ public class RegistrarSubjectServlet extends HttpServlet {
 		case "eli" : eliminar(request, response); break;
 		case "lst" : listar(request, response); break;
 		case "editar": editar(request,response); break; 
+		case "reset": reset(request, response); break;
 		default:
 			request.setAttribute("mensaje", "<div class='alert alert-danger' role= 'alert'>Ocurrió un problema</div>");
 			request.getRequestDispatcher("subject.jsp").forward(request, response);
 		}
+		
+	}
+
+	private void reset(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.getRequestDispatcher("subject.jsp").forward(request, response);
 		
 	}
 
