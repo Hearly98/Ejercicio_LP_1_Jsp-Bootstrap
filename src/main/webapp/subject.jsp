@@ -2,6 +2,8 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%--directriz para importar mis librerias personalizadas --%>
+<%@ taglib uri="WEB-INF/libreria.tld" prefix="mis_tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,10 +43,13 @@
 					  <br>
 					  	<!-- Level -->
 					    <div class="form-group">
-					    <label for="level">Level</label>
+					    <label for="nivel">Nivel</label>
 					    <input type="text"
-					     class="form-control"  id="level" name="txtLevel" value="${s.level}"></div>
-					    
+					     class="form-control"  id="nivel" name="txtLevel" value="${s.level}"></div>
+					     <br>
+					    <select class="form-control" name="cboNivel">
+					    	<misTags:opcionesCboNivel value="${s.level}"/>
+					    </select>
 					   <!--  Profesor -->
 					  <div class="form-group">
 					    <label for="profesor">Profesor</label>
@@ -55,9 +60,10 @@
 					  <br>
 					  
 					  <button type="submit" class="btn btn-primary" name="type" value="reg">Registrar</button>
+					  <button type="submit" class="btn btn-primary" name="type" value="act">Actualizar</button>
 					  <button type="submit" class="btn btn-danger" name="type" value="eli">Eliminar</button>
 					  <button type="submit" class="btn btn-warning" name="type" value="lst">Listar</button>
-					  <button type="submit" class="btn btn-warning" name="type" value="reset">Limpiar</button>
+					
 					</form>
 					<br>
 					${mensaje }
